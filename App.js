@@ -1,21 +1,14 @@
-import { StatusBar } from 'expo-status-bar';
-import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import React, { useEffect } from "react";
+// import * as SplashScreen from "expo-splash-screen";
+import { useFonts } from "expo-font";
+import Navigation from "./src/Navigation";
+
+// SplashScreen.preventAutoHideAsync();
 
 export default function App() {
-  return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
-  );
-}
+  const [fontsLoaded] = useFonts({
+    KOTRA: require("./src/assets/fonts/KOTRA_LEAP.otf"),
+  });
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
+  return fontsLoaded ? <Navigation /> : null;
+}

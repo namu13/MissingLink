@@ -3,9 +3,10 @@
     "name": "MissingLink",
     "slug": "MissingLink",
     "version": "1.0.0",
-    "assetBundlePatterns": [
-      "**/*"
-    ]
+    "assetBundlePatterns": ["**/*"],
+    "ios": {
+      "bundleIdentifier": "com.namu13.MissingLink"
+    }
   },
   "name": "MissingLink"
 }
